@@ -1,9 +1,8 @@
+import 'package:alfa/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MyApp(),
-  );
+  runApp(HomePage());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue[200],
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'CENOPS',
             style: TextStyle(
               fontSize: 20.0,
@@ -35,20 +34,25 @@ class MyApp extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.all(17.0),
-                child: Card(
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.medical_services,
-                      color: Colors.amber,
+                child: TextButton(
+                  onPressed: () {
+                    print('Botão presionado');
+                  },
+                  child: const Card(
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.medical_services,
+                        color: Colors.amber,
+                      ),
+                      title: Text(
+                        'Médicos',
+                      ),
+                      horizontalTitleGap: 10.0,
                     ),
-                    title: Text(
-                      'Médicos',
-                    ),
-                    horizontalTitleGap: 10.0,
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(17.0),
                 child: Card(
                   child: ListTile(
