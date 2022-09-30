@@ -1,38 +1,50 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+//HOMEPAGE DO APP
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int x = 10; //so de teste; Nao esquecer o setstate
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blueAccent[400], //COR DE FUNDO
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(10.0),
                 child: Card(
+                  //CARTÃO 1
                   child: ListTile(
                     leading: Icon(
                       Icons.badge,
-                      color: Colors.amber,
+                      color: Colors.yellow[600],
                       size: 30.0,
                     ),
-                    title: Text(
+                    title: const Text(
                       'Profissionais',
                       textScaleFactor: 1.2,
                     ),
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(10.0),
                 child: Card(
+                  //CARTÃO 2
                   child: ListTile(
                     leading: Icon(
                       Icons.groups,
-                      color: Colors.amber,
+                      color: Colors.yellow[600],
                       size: 30.0,
                     ),
                     title: Text(
@@ -42,13 +54,14 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(10.0),
                 child: Card(
+                  //CARTÃO 3
                   child: ListTile(
                     leading: Icon(
                       Icons.chat_bubble,
-                      color: Colors.amber,
+                      color: Colors.yellow[600],
                       size: 30.0,
                     ),
                     title: Text(
@@ -59,21 +72,23 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
+                //ESPAÇAMENTO ENTRE CARTOES E LOGOS
                 height: 100.0,
               ),
               Row(
+                //LOGOS UFC E CENOPS
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
                     children: <Widget>[
                       Image.asset(
-                        'images/UFCBrasao.png',
-                        width: 150.0,
-                        height: 150.0,
+                        'assets/images/UFCBrasao.png',
+                        width: 90.0,
+                        height: 90.0,
                       ),
                       const Text(
-                        'UFC',
-                        textScaleFactor: 1.2,
+                        'Universidade\nFederal\ndo Ceará',
+                        textScaleFactor: 1.0,
                       ),
                     ],
                   ),
@@ -87,14 +102,14 @@ class HomePage extends StatelessWidget {
                       ),
                       Text(
                         'CENOPS',
-                        textScaleFactor: 1.2,
+                        textScaleFactor: 1.0,
                       ),
                     ],
                   ),
                 ],
               ),
               const SizedBox(
-                height: 100.0,
+                height: 60.0,
               ),
             ],
           ),
