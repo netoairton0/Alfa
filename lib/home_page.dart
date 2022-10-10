@@ -9,8 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int x = 10; //so de teste; Nao esquecer o setstate
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.badge,
-                      color: Colors.yellow[600],
+                      color: Colors.blueAccent[400],
                       size: 30.0,
                     ),
                     title: const Text(
@@ -44,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.groups,
-                      color: Colors.yellow[600],
+                      color: Colors.blueAccent[400],
                       size: 30.0,
                     ),
                     title: Text(
@@ -61,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.chat_bubble,
-                      color: Colors.yellow[600],
+                      color: Colors.blueAccent[400],
                       size: 30.0,
                     ),
                     title: Text(

@@ -21,15 +21,15 @@ class Profissionais extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(17.0),
                 child: Card(
                   child: ListTile(
                     leading: Icon(
                       Icons.medical_services,
-                      color: Colors.amber,
+                      color: Colors.blue[900],
                     ),
                     title: Text(
                       'Médicos',
@@ -38,13 +38,13 @@ class Profissionais extends StatelessWidget {
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(17.0),
                 child: Card(
                   child: ListTile(
                     leading: Icon(
                       Icons.gavel,
-                      color: Colors.amber,
+                      color: Colors.blue[900],
                     ),
                     title: Text(
                       'Advogados',
@@ -52,10 +52,6 @@ class Profissionais extends StatelessWidget {
                     horizontalTitleGap: 10.0,
                   ),
                 ),
-              ),
-              Container(
-                //OBJETIVO: COLUNA OCUPAR A TELA INTEIRA
-                width: double.infinity,
               ),
             ],
           ),
