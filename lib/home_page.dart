@@ -9,6 +9,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Expanded criarCard({required IconData icone, required String texto}) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Card(
+          child: ListTile(
+            leading: Icon(
+              icone,
+              color: Colors.blueAccent[400],
+              size: 30.0,
+            ),
+            title: Text(
+              texto,
+              textScaleFactor: 1.2,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,96 +39,37 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Card(
-                  //CARTÃO 1
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.badge,
-                      color: Colors.blueAccent[400],
-                      size: 30.0,
-                    ),
-                    title: const Text(
-                      'Profissionais',
-                      textScaleFactor: 1.2,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Card(
-                  //CARTÃO 2
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.groups,
-                      color: Colors.blueAccent[400],
-                      size: 30.0,
-                    ),
-                    title: Text(
-                      'Quem somos',
-                      textScaleFactor: 1.2,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Card(
-                  //CARTÃO 3
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.chat_bubble,
-                      color: Colors.blueAccent[400],
-                      size: 30.0,
-                    ),
-                    title: Text(
-                      'Entre em contato',
-                      textScaleFactor: 1.2,
-                    ),
-                  ),
-                ),
-              ),
+              criarCard(icone: Icons.badge, texto: 'Profissionais'),
+              criarCard(icone: Icons.chat_bubble, texto: 'Entre em contato'),
+              criarCard(icone: Icons.list_alt, texto: 'Sites interessantes'),
               const SizedBox(
                 //ESPAÇAMENTO ENTRE CARTOES E LOGOS
-                height: 100.0,
+                height: 80.0,
               ),
               Row(
                 //LOGOS UFC E CENOPS
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Image.asset(
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(40.0),
+                      child: Image.asset(
                         'assets/images/UFCBrasao.png',
-                        width: 90.0,
-                        height: 90.0,
                       ),
-                      const Text(
-                        'Universidade\nFederal\ndo Ceará',
-                        textScaleFactor: 1.0,
-                      ),
-                    ],
+                    ),
                   ),
-                  const SizedBox(
-                    width: 70.0,
-                  ),
-                  Column(
-                    children: const <Widget>[
-                      CircleAvatar(
-                        radius: 60.0,
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(40.0),
+                      child: Image.asset(
+                        'assets/images/UFCBrasao.png',
                       ),
-                      Text(
-                        'CENOPS',
-                        textScaleFactor: 1.0,
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 60.0,
+                height: 40.0,
               ),
             ],
           ),
@@ -116,3 +78,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+//TODO: olhar se é possivel deixar os tamanhos do listtile variavel

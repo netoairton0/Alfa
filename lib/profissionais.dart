@@ -2,6 +2,26 @@ import 'package:flutter/material.dart';
 
 //PAGINA QUE LISTA OS PROFISSIONAIS
 class Profissionais extends StatelessWidget {
+  Expanded criarCardProfissional(
+      {required IconData icone, required String texto}) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Card(
+          child: ListTile(
+            leading: Icon(
+              icone,
+              color: Colors.blue[400],
+            ),
+            title: Text(
+              texto,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,36 +43,14 @@ class Profissionais extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(17.0),
-                child: Card(
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.medical_services,
-                      color: Colors.blue[900],
-                    ),
-                    title: Text(
-                      'Médicos',
-                    ),
-                    horizontalTitleGap: 10.0,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(17.0),
-                child: Card(
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.gavel,
-                      color: Colors.blue[900],
-                    ),
-                    title: Text(
-                      'Advogados',
-                    ),
-                    horizontalTitleGap: 10.0,
-                  ),
-                ),
-              ),
+              criarCardProfissional(
+                  icone: Icons.medical_services, texto: 'Médicos'),
+              criarCardProfissional(icone: Icons.gavel, texto: 'Advogados'),
+              criarCardProfissional(icone: Icons.school, texto: 'Professores'),
+              criarCardProfissional(
+                  icone: Icons.psychology, texto: 'Psicólogos'),
+              criarCardProfissional(
+                  icone: Icons.airline_seat_recline_extra, texto: 'Dentistas'),
             ],
           ),
         ),
@@ -60,3 +58,4 @@ class Profissionais extends StatelessWidget {
     );
   }
 }
+//Dar uma olahda no icone de dentista, olhar o tamanho do icone e do texto
