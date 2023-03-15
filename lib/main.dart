@@ -1,5 +1,10 @@
 import 'package:alfa/contato.dart';
 import 'package:alfa/home_page.dart';
+import 'package:alfa/pro_enfermeiros.dart';
+import 'package:alfa/pro_interpretes.dart';
+import 'package:alfa/pro_medicos.dart';
+import 'package:alfa/pro_professores.dart';
+import 'package:alfa/pro_psicologos.dart';
 import 'package:alfa/profissionais.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +36,7 @@ class _CENOPSState extends State<CenopsApp> {
             color: corSecundaria,
             fontFamily: fonteDosTitulos,
             fontWeight: FontWeight.bold,
-            fontSize: 20.0,
+            fontSize: 25.0,
           ),
           bodyText2: TextStyle(
             color: corSecundaria,
@@ -41,8 +46,17 @@ class _CENOPSState extends State<CenopsApp> {
           ),
         ),
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/primeira': (context) => Profissionais(),
+        '/segunda': (context) => EntreEmContato(),
+        '/terceira': (context) => Enfermeiros(),
+        '/quarta': (context) => Interpretes(),
+        '/quinta': (context) => Medicos(),
+        '/sexta': (context) => Professores(),
+        '/setima': (context) => Psicologos(),
+      },
     );
   }
 }
-//TODA VARIAVEL É GLOBAL??????

@@ -10,7 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Expanded criarCard({required IconData icone, required String texto}) {
+  Expanded criarCard(
+      {required IconData icone, required String texto, required String rota}) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(
@@ -21,7 +22,9 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, rota);
+                },
                 icon: Icon(
                   icone,
                   color: corSecundaria,
@@ -52,17 +55,18 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 40.0,
             ),
-            criarCard(icone: Icons.badge, texto: 'Profissionais'),
-            criarCard(icone: Icons.chat_bubble, texto: 'Entre em contato'),
+            criarCard(
+                icone: Icons.badge, texto: 'Profissionais', rota: '/primeira'),
+            criarCard(
+                icone: Icons.chat_bubble,
+                texto: 'Entre em contato',
+                rota: '/segunda'),
             const SizedBox(
               //ESPAÇAMENTO ENTRE CARTOES E LOGOS
-              height: 60.0,
+              height: 160.0,
             ),
             CriarIcone(
               caminho: 'assets/images/LogoExtensaMonocromatica.png',
-            ),
-            const SizedBox(
-              height: 20.0,
             ),
           ],
         ),

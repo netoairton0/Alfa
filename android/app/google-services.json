@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "138069045053",
+    "project_id": "cenops-ufc",
+    "storage_bucket": "cenops-ufc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138069045053:android:e39fa3cbe8e5662da5df54",
+        "android_client_info": {
+          "package_name": "br.com.cenops"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138069045053-37bje5i6k9unss1pc2s36ntt8bhdvv25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe4qPQIMlDdV7330f3PEgh9bVtijiuqxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138069045053-37bje5i6k9unss1pc2s36ntt8bhdvv25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
