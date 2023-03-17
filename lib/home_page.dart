@@ -65,28 +65,15 @@ class _HomePageState extends State<HomePage> {
               //ESPAÇAMENTO ENTRE CARTOES E LOGOS
               height: 160.0,
             ),
-            CriarIcone(
-              caminho: 'assets/images/LogoExtensaMonocromatica.png',
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Image.asset(
+                  'assets/images/LogoExtensaMonocromatica.png',
+                ),
+              ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class CriarIcone extends StatelessWidget {
-  final String caminho;
-
-  CriarIcone({required this.caminho});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(50.0),
-        child: Image.asset(
-          caminho,
         ),
       ),
     );
