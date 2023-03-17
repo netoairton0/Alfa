@@ -4,19 +4,29 @@ O aplicativo Cenops UFC serve como banco de dados de profissionais que dominam a
 
 V. 1.0.0
 
+## Autores
+
+[<img src="https://avatars.githubusercontent.com/u/62609651?v=4" width=115><br><sub>José Airton Araújo</sub>](https://github.com/netoairton0)
+
 ## Índice
 
 * [Índice](#Índice)
-* [Guia do usuário](#Guia_Do_Usuário)
-* [Código fonte](#Código_fonte)
-
-## Getting Started
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
+* [Guia do usuário](#Guia-Do-Usuário)
+* [Código fonte](#Código-fonte)
 
 ## Guia do usuário
+
+### Homepage
+
+Na página principal encontramos um botão que nos leva para os contatos do projeto e outro que nos leva aos profissionais cadastrados.
+
+### Contatos
+
+Na página de contatos temos vários contatos do projeto, inclusive o formulário para se cadastrar no app.
+
+### Profissionais
+
+Nessa página encontramos as profissões disponíveis, podemos selecionar a que queremos, e seremos direcionado para uma página com os profissionais cadastrados, selecionando o que desejamos, obtemos um pop-up com as informações do mesmo.
 
 ## Código fonte
 
@@ -40,3 +50,6 @@ A página de profissionais funciona da mesma maneira que a homepage, foi feita u
 
 ### As listas dos profissionais
 
+As listas funcionam da mesma maneira, utilizando a de intérpretes como exemplo, temos: 
+
+A função de criarInterprete é semelhante a de criarCard, a diferença é basicamente que usamos um textbutton normal, e que quando ele é presionado ele chama um showDialog, passamos então o context da aplicação e um _buildPopupDialog como parâmetros. Essa segunda função instancia um pop-up com o conjunto de dados passados pelo profissional. E ainda instanciamos um textbutton para fechar o pop-up. (Qualquer dúvida sobre essa parte pode ser respondida na página sobre AlertDialog do flutter)
